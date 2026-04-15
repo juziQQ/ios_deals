@@ -27,10 +27,13 @@
 本项目按以下路径设计：
 
 ```text
-/ql/data/scripts/ios_deals
+/ql/data/scripts/juzi998_ios_deals
 /ql/data/db/ios_deals.db
 /ql/data/scripts/notify.py
 ```
+
+> 说明：使用 `ql repo` 拉取公开仓库时，青龙本地目录通常会按 `GitHub用户名_仓库名` 命名。  
+> 当前仓库地址为 `https://github.com/juzi998/ios_deals.git`，因此本地目录通常为 `juzi998_ios_deals`。
 
 ---
 
@@ -39,8 +42,8 @@
 订阅拉取后，任务命令请保持为：
 
 ```bash
-task ios_deals/ios_digest.py
-task ios_deals/ios_watchlist.py
+task juzi998_ios_deals/ios_digest.py
+task juzi998_ios_deals/ios_watchlist.py
 ```
 
 **不要改成 `python3 /ql/data/scripts/...`。**  
@@ -97,7 +100,7 @@ ios_deals/
 ### 运行后自动生成
 
 ```text
-/ql/data/scripts/ios_deals/ai_cache.json
+/ql/data/scripts/juzi998_ios_deals/ai_cache.json
 /ql/data/db/ios_deals.db
 ```
 
@@ -112,7 +115,7 @@ ios_deals/
 入口：
 
 ```bash
-task ios_deals/ios_digest.py
+task juzi998_ios_deals/ios_digest.py
 ```
 
 功能：
@@ -128,7 +131,7 @@ task ios_deals/ios_digest.py
 入口：
 
 ```bash
-task ios_deals/ios_watchlist.py
+task juzi998_ios_deals/ios_watchlist.py
 ```
 
 功能：
@@ -189,42 +192,36 @@ task ios_deals/ios_watchlist.py
 
 ---
 
-## 安装方式
+## 安装方式（ql repo）
 
-### 方式一：青龙订阅（推荐）
+本项目推荐使用 **`ql repo`** 方式导入。
 
-建议按“公开仓库订阅”方式安装。
-
-#### 订阅建议填写
-
-- 名称：`ios_deals`
-- 类型：`公开仓库`
-- 链接：`https://github.com/juziQQ/ios_deals.git`
-- 分支：`main`
-- 文件后缀：`py json`
-- 白名单：`^(ios_digest|ios_watchlist|common|ai_filter)\.py$|^(feeds|watchlist_ids)\.json$`
-
-订阅后保持任务命令为：
+### 第一步：在青龙「订阅管理 -> 新建订阅」页面顶部输入框粘贴下面整条命令
 
 ```bash
-task ios_deals/ios_digest.py
-task ios_deals/ios_watchlist.py
+ql repo https://github.com/juzi998/ios_deals.git "ios_digest.py|ios_watchlist.py" "" "common.py|ai_filter.py|feeds.json|watchlist_ids.json" "main" "py"
 ```
 
-### 方式二：手动放入脚本目录
+### 第二步：补充订阅定时
 
-把仓库文件放到：
+- 定时类型：`crontab`
+- 定时规则：`5 4 * * *`
 
-```text
-/ql/data/scripts/ios_deals
-```
+表示：**每天 04:05 拉取一次仓库更新**
 
-然后在青龙中手动创建两条任务：
+### 第三步：确认以下选项
+
+- 自动添加任务：**开启**
+- 自动删除任务：**开启**
+
+### 第四步：同步后应自动生成两个任务
 
 ```bash
-task ios_deals/ios_digest.py
-task ios_deals/ios_watchlist.py
+task juzi998_ios_deals/ios_digest.py
+task juzi998_ios_deals/ios_watchlist.py
 ```
+
+> 如果你 GitHub 用户名以后变更，请把上面的仓库地址改成新的用户名，青龙本地目录名也会随之变化。
 
 ---
 
@@ -245,6 +242,10 @@ task ios_deals/ios_watchlist.py
 ```cron
 0 */4 * * *
 ```
+
+> 说明：  
+> `5 4 * * *` 是**订阅拉取时间**，只控制仓库更新时间。  
+> 上面两个 cron 是**脚本运行时间**，需要在青龙「定时任务」页面中分别设置。
 
 ---
 
@@ -273,13 +274,13 @@ AI 日志采用摘要式输出，例如：
 ### Watchlist 配置文件
 
 ```text
-/ql/data/scripts/ios_deals/watchlist_ids.json
+/ql/data/scripts/juzi998_ios_deals/watchlist_ids.json
 ```
 
 ### AI 缓存
 
 ```text
-/ql/data/scripts/ios_deals/ai_cache.json
+/ql/data/scripts/juzi998_ios_deals/ai_cache.json
 ```
 
 ### 价格历史 / 提醒去重数据库
