@@ -1,0 +1,67 @@
+{
+  "rss_feeds": [
+    {
+      "name": "appstore-discounts-us",
+      "url": "https://raw.githubusercontent.com/appstore-discounts/appstore-discounts/main/rss/us.xml",
+      "region": "us",
+      "enabled": true,
+      "type": "rss"
+    },
+    {
+      "name": "appstore-discounts-cn",
+      "url": "https://raw.githubusercontent.com/appstore-discounts/appstore-discounts/main/rss/cn.xml",
+      "region": "cn",
+      "enabled": true,
+      "type": "rss"
+    },
+    {
+      "name": "appstore-discounts-tr",
+      "url": "https://raw.githubusercontent.com/appstore-discounts/appstore-discounts/main/rss/tr.xml",
+      "region": "tr",
+      "enabled": true,
+      "type": "rss"
+    },
+    {
+      "name": "apple-toppaid-us",
+      "url": "https://rss.marketingtools.apple.com/api/v2/us/apps/top-paid/20/apps.json",
+      "region": "us",
+      "enabled": true,
+      "type": "apple_json"
+    },
+    {
+      "name": "apple-toppaid-cn",
+      "url": "https://rss.marketingtools.apple.com/api/v2/cn/apps/top-paid/20/apps.json",
+      "region": "cn",
+      "enabled": true,
+      "type": "apple_json"
+    },
+    {
+      "name": "apple-toppaid-tr",
+      "url": "https://rss.marketingtools.apple.com/api/v2/tr/apps/top-paid/20/apps.json",
+      "region": "tr",
+      "enabled": true,
+      "type": "apple_json"
+    },
+    {
+      "name": "cheapcharts-free-us",
+      "url": "https://www.cheapcharts.com/us/itunes/apps/currently-free",
+      "region": "us",
+      "enabled": false,
+      "type": "html_cheapcharts"
+    },
+    {
+      "name": "cheapcharts-sale-us",
+      "url": "https://www.cheapcharts.com/us/itunes/apps/on-sale",
+      "region": "us",
+      "enabled": false,
+      "type": "html_cheapcharts"
+    },
+    {
+      "name": "appadvice-gonefree",
+      "url": "https://appadvice.com/apps-gone-free",
+      "region": "us",
+      "enabled": false,
+      "type": "html_appadvice"
+    }
+  ]
+}

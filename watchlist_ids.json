@@ -1,0 +1,104 @@
+{
+  "apps": [
+    {
+      "id": 6476057278,
+      "name": "DS_one",
+      "countries": ["us", "cn", "tr"],
+      "enabled": true,
+      "target_price": 0,
+      "notify_on_any_drop": true,
+      "notify_on_free": true,
+      "tags": ["效率", "买断"]
+    },
+    {
+      "id": 1373567447,
+      "name": "Loon",
+      "countries": ["us", "tr"],
+      "enabled": true,
+      "target_price": 12,
+      "notify_on_any_drop": true,
+      "notify_on_free": true,
+      "tags": ["代理工具", "买断"]
+    },
+    {
+      "id": 1501532023,
+      "name": "servercat",
+      "countries": ["us", "cn", "tr"],
+      "enabled": true,
+      "target_price": 12,
+      "notify_on_any_drop": true,
+      "notify_on_free": true,
+      "tags": ["服务器工具", "买断"]
+    },
+    {
+      "id": 364738545,
+      "name": "FileBrowser",
+      "countries": ["us", "cn", "tr"],
+      "enabled": true,
+      "target_price": 12,
+      "notify_on_any_drop": true,
+      "notify_on_free": true,
+      "tags": ["管理工具", "买断"]
+    },
+    {
+      "id": 510282524,
+      "name": "owlfiles-file-manager",
+      "countries": ["us", "tr"],
+      "enabled": true,
+      "target_price": 12,
+      "notify_on_any_drop": true,
+      "notify_on_free": true,
+      "tags": ["文件管理工具", "买断"]
+    },
+    {
+      "id": 6448362669,
+      "name": "neoserver-ssh客户端-linux管理网络状态监控",
+      "countries": ["us", "cn", "tr"],
+      "enabled": true,
+      "target_price": 12,
+      "notify_on_any_drop": true,
+      "notify_on_free": true,
+      "tags": ["网络管理工具", "买断"]
+    },
+    {
+      "id": 1442620678,
+      "name": "surge",
+      "countries": ["us", "tr"],
+      "enabled": true,
+      "target_price": 12,
+      "notify_on_any_drop": true,
+      "notify_on_free": true,
+      "tags": ["代理工具", "买断"]
+    },
+    {
+      "id": 1616105820,
+      "name": "Egern",
+      "countries": ["us", "tr"],
+      "enabled": true,
+      "target_price": 12,
+      "notify_on_any_drop": true,
+      "notify_on_free": true,
+      "tags": ["代理工具", "买断"]
+    },
+    {
+      "id": 1116905928,
+      "name": "nPlayer",
+      "countries": ["us", "cn", "tr"],
+      "enabled": true,
+      "target_price": 0,
+      "notify_on_any_drop": true,
+      "notify_on_free": true,
+      "tags": ["播放器", "买断"]
+    },
+    {
+      "id": 539397400,
+      "name": "nPlayer Plus",
+      "countries": ["us", "cn", "tr"],
+      "enabled": true,
+      "target_price": 0,
+      "notify_on_any_drop": true,
+      "notify_on_free": true,
+      "tags": ["播放器", "买断"]
+    }
+  ]
+}
